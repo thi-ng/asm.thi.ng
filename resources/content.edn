@@ -173,6 +173,9 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
         .section .data
         .align 2
 
+Source_repo:
+        .asciz \"https://github.com/thi-ng/asm.thi.ng\"
+
 Last_modified:
         .quad __TIMESTAMP__ @ __DATE__
 
