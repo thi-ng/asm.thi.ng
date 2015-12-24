@@ -169,7 +169,7 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
             :projects
             {:section-label ".links.projects"
              :categories    [{:label "Workshops"
-                              :links [{:url   "https://github.com/learn-postspectacular/diy-synth-ldn-2015"
+                              :links [{:url   "https://github.com/thi-ng/ws-ldn-3"
                                        :label "DIY Synth London workshop repo (Dec 2015)"
                                        :desc  "Complete Eclipse project w/ 8 examples (incl. polyphonic MIDI synth)"}]}
                              {:label "Audio"
