@@ -53,7 +53,18 @@ If you want to contribute an interesting link, feel free to get in touch!"}
                                        :desc  "Open source environment for embedded applications incl. RTOS, HAL, peripheral drivers"}
                                       {:url   "http://dunkels.com/adam/pt/index.html"
                                        :label "Protothreads"
-                                       :desc  "Extremely lightweight stackless threads designed for severely memory constrained systems"}]}
+                                       :desc  "Extremely lightweight stackless threads designed for severely memory constrained systems"}
+                                      {:url   "https://github.com/MaJerle/stm32fxxx_hal_libraries"
+                                       :label "STM32Fxx HAL libs"
+                                       :desc  "Highlevel wrapper's for standard STM HAL drivers (incl. examples)"}
+                                      {:url   "https://github.com/cnoviello/stm32-nucleof4"
+                                       :label "Eclipse project templates for STM32Nucleo-F4"}
+                                      {:url   "https://github.com/ARMmbed/mbed-os"
+                                       :label "mbed-os"
+                                       :desc  "Modular operating system for ARM microcontrollers"}
+                                      {:url   "https://github.com/ARMmbed/yotta"
+                                       :label "Yotta"
+                                       :desc  "X-platform build system for Mbed OS based projects"}]}
                              {:label "Code_generation"
                               :links [{:url   "http://www.st.com/web/en/catalog/tools/PF259242"
                                        :label "STM32CubeMX"
@@ -65,7 +76,9 @@ If you want to contribute an interesting link, feel free to get in touch!"}
                                        :label "CMSIS-SVD"
                                        :desc  "ARM CMSIS-SVD Repository and Parsers"}]}
                              {:label "Online_tools"
-                              :links [{:url   "http://gcc.parallella.org/"
+                              :links [{:url   "https://www.mbed.com/en/"
+                                       :label "mbed IDE/SDK"}
+                                      {:url   "http://gcc.parallella.org/"
                                        :label "GCC Interactive compiler"
                                        :desc  "Multi-platform GCC w/ color coded mapping from C to Asm sections"}
                                       {:url   "https://www.onlinedisassembler.com/odaweb/"
@@ -75,7 +88,7 @@ If you want to contribute an interesting link, feel free to get in touch!"}
                               :links [{:url   "http://salmanarif.bitbucket.org/visual/index.html"
                                        :label "VisUAL - A highly visual ARM emulator"
                                        :desc  "Java based x-platform tool to make learning ARM Assembly language easier"}]}]}
-            
+
             :devices
             {:section-label ".links.devices"
              :desc          "The STM32 family by ST Microelectronics is one of the largest and
@@ -99,7 +112,7 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF261641"
                                        :label "STM32F746G-DISCO"
                                        :desc  "Cortex-M7, 1MB Flash, 340KB RAM, 4\" LCD-TFT (480x272), USB, Audio, Ethernet, Arduino conn"}]}]}
-            
+
             :refs
             {:section-label ".links.references"
              :categories    [{:label "STM_Documentation"
@@ -144,22 +157,44 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "http://www.bravegnu.org/gnu-eprog/index.html"
                                        :label "Embedded Programming with the GNU Toolchain"}
                                       {:url   "https://community.arm.com/docs/DOC-9652"
-                                       :label "Useful assembler directives and macros for the GNU assembler"}]}]}
+                                       :label "Useful assembler directives and macros for the GNU assembler"}]}
+                             {:label "Blogs"
+                              :links [{:url   "http://www.carminenoviello.com/en/"
+                                       :label "Carmine Noviello"}
+                                      {:url   "http://stm32f4-discovery.com"
+                                       :label "stm32f4-discovery.com"}
+                                      {:url   "http://hackaday.com/tag/arm"
+                                       :label "Hackaday (ARM category)"}]}]}
+
             :projects
             {:section-label ".links.projects"
-             :body "
-        .section .links.projects
+             :categories    [{:label "Workshops"
+                              :links [{:url   "https://github.com/learn-postspectacular/diy-synth-ldn-2015"
+                                       :label "DIY Synth London workshop repo (Dec 2015)"
+                                       :desc  "Complete Eclipse project w/ 8 examples (incl. polyphonic MIDI synth)"}]}
+                             {:label "Audio"
+                              :links [{:url   "https://github.com/pichenettes/eurorack"
+                                       :label "Mutable Intrument's Eurorack synth modules"
+                                       :desc  "C++, incl. fully featured DSP lib"}
+                                      {:url   "https://github.com/MrBlueXav/Dekrispator_v2"
+                                       :label "MrBlueXav/Dekrispator_v2"
+                                       :desc  "Experimental synthesizer & autonomous noise box w/ USB MIDI"}
+                                      {:url   "https://github.com/MrBlueXav/Juronstruktor"
+                                       :label "MrBlueXav/Juronstruktor"
+                                       :desc  "Basic sample player with sequencer and effects based on the Dekrispator"}]}
+                             {:label "Games"
+                              :links [{:url   "https://github.com/floppes/stm32doom"
+                                       :label "stm32doom"
+                                       :desc  "DOOM port for the STM32F429-DISCO board"}]}
+                             {:label "Starter_projects"
+                              :links [{:url   "https://github.com/TDAbboud/STM32F4_Examples"
+                                       :label "TDAbboud/STM32F4_Examples"}
+                                      {:url   "https://github.com/rowol/stm32_discovery_arm_gcc"
+                                       :label "rowol/stm32_discovery_arm_gcc"}]}]}
 
-@@ TODO: list interesting opensource projects
-
-"
-             :categories    [{:label ""
-                              :links [{:url   ""
-                                       :label ""
-                                       :desc  ""}]}]}
-            
             :contact
             {:section-label ".links.contact"
+             :desc          "Get in touch, submit a link or sign up to a workshop"
              :categories    [{:links [{:url   "https://twitter.com/toxi"
                                        :label "@toxi"}
                                       {:url   "https://twitter.com/forthcharlie"
@@ -167,10 +202,9 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "http://workshop.thi.ng"
                                        :label "workshop.thi.ng"}]}]}
 
-            :epilog
+            :data
             {:section-label ".data"
-             :body "
-        .section .data
+             :body "        .section .data
         .align 2
 
 Source_repo:
@@ -179,7 +213,10 @@ Source_repo:
 Last_modified:
         .quad __TIMESTAMP__ @ __DATE__
 
+Resource_count:
+        .word __COUNT__
+
 "}}
- :order    [:header :nav :intro :tools :devices :refs :projects :contact :epilog]
+ :order    [:header :nav :intro :data :tools :devices :refs :projects :contact]
  :indent   "        "
  :tracking "UA-59470713-4"}

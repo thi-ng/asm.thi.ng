@@ -8,12 +8,20 @@
 
 (def config (read-string (slurp (io/resource "content.edn"))))
 
+(def link-count
+  (->> (:sections config)
+       (vals)
+       (mapcat :categories)
+       (mapcat :links)
+       (count)))
+
 (defn inject-variables
   [body]
   (let [now (java.util.Date.)]
     (-> body
         (str/replace "__TIMESTAMP__" (str (.getTime now)))
-        (str/replace "__DATE__" (f/format-date now)))))
+        (str/replace "__DATE__" (f/format-date now))
+        (str/replace "__COUNT__" (str link-count)))))
 
 (defn page-header
   [{:keys [title meta css js]}]
