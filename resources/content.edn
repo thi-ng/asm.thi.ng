@@ -1,0 +1,182 @@
+{:html
+ {:meta  {:keywords ""
+          :author   "Karsten Schmidt, @toxi"
+          :viewport "width=device-width, initial-scale=1"}
+  :title "asm.thi.ng - baremetal ARM coding resources"
+  :css   ["https://fonts.googleapis.com/css?family=Lekton:400"
+          "css/highlight/monokai-sublime.css?__CACHE__"
+          "css/style.css?__CACHE__"]
+  :js    ["js/highlight.pack.js"]}
+ :sections {:header
+            {:body
+             "
+        .syntax unified
+        .cpu    cortex-m4
+
+@@ open source baremetal coding resources for ARM Cortex-M
+"}
+            :nav      {:items [:tools :devices :refs :projects :contact]}
+
+            :intro
+            {:section-label ".intro"
+             :desc          "This is a growing collection of links to handy resources for learning about and
+working low-level with ARM CPUs (primarily ASM related)
+If you want to contribute an interesting link, feel free to get in touch!"}
+            :tools
+            {:section-label ".links.tools"
+             :categories    [{:label "OSS_toolchain"
+                              :links [{:url   "https://launchpad.net/gcc-arm-embedded"
+                                       :label "GCC ARM embedded (arm-none-eabi)"
+                                       :desc  "ARM cross-compiler toolchain"}
+                                      {:url   "https://gnuarmeclipse.github.io"
+                                       :label "GNU ARM Eclipse"
+                                       :desc  "Eclipse CDT plugin & debugger for embedded devices"}
+                                      {:url   "http://opensource.zylin.com/embeddedcdt.html"
+                                       :label "Zylin Embedded CDT"
+                                       :desc  "GDB / Eclipse debugger bridge"}
+                                      {:url   "https://github.com/texane/stlink"
+                                       :label "ST-Link"
+                                       :desc  "Easy-to-use programmer for ST-Link devices (e.g. STM32, Nucleo...)"}
+                                      {:url   "http://openocd.org"
+                                       :label "OpenOCD"
+                                       :desc  "Most flexible of the opensource chip debuggers"}]}
+                             {:label "STM_SDK"
+                              :links [{:url   "http://www.st.com/web/en/catalog/tools/PF259243"
+                                       :label "STM32CubeF4 SDK"
+                                       :desc  "Official STM SDK, incl. HAL, ARM CMSIS base & board specific drivers"}
+                                      {:url   "http://www.st.com/web/en/catalog/tools/PF261909"
+                                       :label "STM32CubeF7 SDK"
+                                       :desc  "Official STM SDK, incl. HAL, ARM CMSIS base & board specific drivers"}]}
+                             {:label "OSS_SDK"
+                              :links [{:url   "http://www.chibios.org/"
+                                       :label "ChibiOS"
+                                       :desc  "Open source environment for embedded applications incl. RTOS, HAL, peripheral drivers"}
+                                      {:url   "http://dunkels.com/adam/pt/index.html"
+                                       :label "Protothreads"
+                                       :desc  "Extremely lightweight stackless threads designed for severely memory constrained systems"}]}
+                             {:label "Code_generation"
+                              :links [{:url   "http://www.st.com/web/en/catalog/tools/PF259242"
+                                       :label "STM32CubeMX"
+                                       :desc  "Comprehensive CPU & middleware config, code/project generator"}
+                                      {:url   "https://github.com/postspectacular/cmsis-svd-sourcegen"
+                                       :label "CMSIS-SVD-sourcegen"
+                                       :desc  "Extensible multi-language codegen for CPU peripheral register definitions"}
+                                      {:url   "https://github.com/posborne/cmsis-svd"
+                                       :label "CMSIS-SVD"
+                                       :desc  "ARM CMSIS-SVD Repository and Parsers"}]}
+                             {:label "Online_tools"
+                              :links [{:url   "http://gcc.parallella.org/"
+                                       :label "GCC Interactive compiler"
+                                       :desc  "Multi-platform GCC w/ color coded mapping from C to Asm sections"}
+                                      {:url   "https://www.onlinedisassembler.com/odaweb/"
+                                       :label "ODA Online Disassembler"
+                                       :desc  "Multi-platform disassembler and code graph visualization"}]}
+                             {:label "Emulators:"
+                              :links [{:url   "http://salmanarif.bitbucket.org/visual/index.html"
+                                       :label "VisUAL - A highly visual ARM emulator"
+                                       :desc  "Java based x-platform tool to make learning ARM Assembly language easier"}]}]}
+            
+            :devices
+            {:section-label ".links.devices"
+             :desc          "The STM32 family by ST Microelectronics is one of the largest and
+most popular ARM Cortex-M CPUs. We also use them for our workshops..."
+             :categories    [{:label "STM32"
+                              :links [{:url   "http://www.st.com/web/en/catalog/mmc/FM141/SC1169"
+                                       :label "STM32 family device selector"
+                                       :desc  "Overview of the 100+ CPU & board variations in this family"}]}
+                             {:label "__STM32_boards"
+                              :links [{:url   "http://www.st.com/web/catalog/tools/FM116/SC959/SS1532/LN1848"
+                                       :label "STM32 discovery boards (Cortex-M0 - Cortex-M7)"}
+                                      {:url   "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF252419"
+                                       :label "STM32F4-DISCO"
+                                       :desc  "1MB Flash, 192KB RAM, accel/gyro, USB, Audio DAC"}
+                                      {:url   "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF259090"
+                                       :label "STM32F429I-DISCO"
+                                       :desc  "2MB Flash, 256KB RAM, 2.4\" LCD-TFT, accel/gyro, USB"}
+                                      {:url   "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF262395"
+                                       :label "STM32F469I-DISCO"
+                                       :desc  "Cortex-M4, 2MB Flash, 324KB RAM, 4\" LCD-TFT (800x480), USB, Audio DAC, Ethernet, Arduino conn"}
+                                      {:url   "http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1848/PF261641"
+                                       :label "STM32F746G-DISCO"
+                                       :desc  "Cortex-M7, 1MB Flash, 340KB RAM, 4\" LCD-TFT (480x272), USB, Audio, Ethernet, Arduino conn"}]}]}
+            
+            :refs
+            {:section-label ".links.references"
+             :categories    [{:label "STM_Documentation"
+                              :links [{:url   "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/programming_manual/DM00046982.pdf"
+                                       :label "STM32F3/STM32F4 Series Cortex-M4 programming manual (PM0214)"
+                                       :desc  "Includes full instruction set reference"}
+                                      {:url   "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/reference_manual/DM00096844.pdf"
+                                       :label "STM32F401x reference manual"
+                                       :desc  "Device specific documentation incl. pinouts and all peripherals"}
+                                      {:url   "http://www.st.com/web/en/resource/technical/document/reference_manual/DM00031020.pdf"
+                                       :label "STM32F405/415, 407/417, 427/437 & 429/439 reference manual"
+                                       :desc  "Device specific documentation incl. pinouts and all peripherals"}
+                                      {:url   "http://www.st.com/st-web-ui/static/active/jp/resource/technical/document/user_manual/DM00105879.pdf"
+                                       :label "STM32F4xx HAL driver manual"}
+                                      {:url   "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/user_manual/DM00189702.pdf"
+                                       :label "STM32F7xx HAL driver user manual"}]}
+                             {:label "ARM_generic"
+                              :links [{:url   "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0439b/DDI0439B_cortex_m4_r0p0_trm.pdf"
+                                       :label "ARM Cortex-M4 Technical Reference Manual"}
+                                      {:url   "http://infocenter.arm.com/help/topic/com.arm.doc.qrc0001l/QRC0001_UAL.pdf"
+                                       :label "ARM and Thumb-2 Instruction Set Quick Reference Card"}]}
+                             {:label "Books"
+                              :links [{:url   "https://leanpub.com/mastering-stm32"
+                                       :label "Book: Mastering STM32"
+                                       :desc  "Still WIP, but shaping up to be a great intro book to the STM32 platform"}
+                                      {:url   "http://www.hitex.com/fileadmin/pdf/insiders-guides/stm32/isg-stm32-v18d-scr.pdf"
+                                       :label "E-book: The Insider's Guide to the STM32"
+                                       :desc  "Indepth coverage and guide to working with core peripherals"}
+                                      {:url   "http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf"
+                                       :label "E-book: Modern C"}
+                                      {:url   "http://www.bottomupcs.com"
+                                       :label "E-book: Computer Science from the Bottom Up"
+                                       :desc  "Contains essential reading about ELF format"}]}
+                             {:label "Articles_Asm"
+                              :links [{:url   "https://sourceware.org/binutils/docs-2.24/as/index.html"
+                                       :label "GNU Assembler documentation (v2.24)"}
+                                      {:url   "http://www.davespace.co.uk/arm/introduction-to-arm/"
+                                       :label "ARM: Introduction to ARM: Start"}
+                                      {:url   "http://www.davespace.co.uk/tags/EfficientC.html"
+                                       :label "Efficient C for ARM"
+                                       :desc  "Lots of bitesize examples in both C & Asm"}
+                                      {:url   "http://www.bravegnu.org/gnu-eprog/index.html"
+                                       :label "Embedded Programming with the GNU Toolchain"}
+                                      {:url   "https://community.arm.com/docs/DOC-9652"
+                                       :label "Useful assembler directives and macros for the GNU assembler"}]}]}
+            :projects
+            {:section-label ".links.projects"
+             :body "
+        .section .links.projects
+
+@@ TODO: list interesting opensource projects
+
+"
+             :categories    [{:label ""
+                              :links [{:url   ""
+                                       :label ""
+                                       :desc  ""}]}]}
+            
+            :contact
+            {:section-label ".links.contact"
+             :categories    [{:links [{:url   "https://twitter.com/toxi"
+                                       :label "@toxi"}
+                                      {:url   "https://twitter.com/forthcharlie"
+                                       :label "@forthcharlie"}
+                                      {:url   "http://workshop.thi.ng"
+                                       :label "workshop.thi.ng"}]}]}
+
+            :epilog
+            {:section-label ".data"
+             :body "
+        .section .data
+        .align 2
+
+Last_modified:
+        .quad __TIMESTAMP__ @ __DATE__
+
+"}}
+ :order    [:header :nav :intro :tools :devices :refs :projects :contact :epilog]
+ :indent   "        "
+ :tracking "UA-59470713-4"}

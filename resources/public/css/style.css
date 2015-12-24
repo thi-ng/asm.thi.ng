@@ -1,0 +1,59 @@
+html, body, pre, code {
+    font-family: "Lekton",Menlo,monospace;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0 1em;
+    background: #23241f;
+    color: #75715e;
+}
+
+section {
+    margin-top: 2em;
+}
+
+div, pre, code {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin-bottom: 2em;
+}
+
+a.nav:link, a.nav:visited {
+    background: #ff0;
+    color: #000;
+    text-decoration: none;
+    padding: 0 4px;
+}
+
+a.nav:hover {
+    background: #f09;
+}
+
+a:link {
+		color: #e6db74;
+}
+
+a:visited {
+		color: #fff0b0;
+}
+
+.hljs {
+    overflow: hidden;
+    padding: 0;
+}
+
+@media(max-width: 480px) {
+    html, body, pre, code {
+        font-size: 10px;
+    }
+}
+@media(min-width: 481px) and (max-width: 768px) {
+    html, body, pre, code {
+        font-size: 12px;
+    }
+}
