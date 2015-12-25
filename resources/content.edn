@@ -51,6 +51,9 @@ If you want to contribute an interesting link, feel free to get in touch!"}
                               :links [{:url   "http://www.chibios.org/"
                                        :label "ChibiOS"
                                        :desc  "Open source environment for embedded applications incl. RTOS, HAL, peripheral drivers"}
+                                      {:url   "http://github.com/libopencm3/libopencm3/"
+                                       :label "libopencm3"
+                                       :desc  "Firmware library for various ARM Cortex-M microcontrollers & GCC toolchain"}
                                       {:url   "http://dunkels.com/adam/pt/index.html"
                                        :label "Protothreads"
                                        :desc  "Extremely lightweight stackless threads designed for severely memory constrained systems"}
