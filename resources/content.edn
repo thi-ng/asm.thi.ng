@@ -81,7 +81,7 @@ If you want to contribute an interesting link, feel free to get in touch!"}
                              {:label "Online_tools"
                               :links [{:url   "https://www.mbed.com/en/"
                                        :label "mbed IDE/SDK"}
-                                      {:url   "http://gcc.parallella.org/"
+                                      {:url   "http://gcc.godbolt.org/"
                                        :label "GCC Interactive compiler"
                                        :desc  "Multi-platform GCC w/ color coded mapping from C to Asm sections"}
                                       {:url   "https://www.onlinedisassembler.com/odaweb/"
@@ -150,7 +150,10 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                        :label "E-book: Computer Science from the Bottom Up"
                                        :desc  "Contains essential reading about ELF format"}]}
                              {:label "Articles_Asm"
-                              :links [{:url   "https://sourceware.org/binutils/docs-2.24/as/index.html"
+                              :links [{:url   "http://www.coranac.com/tonc/text/asm.htm"
+                                       :label "A whirlwind tour of ARM assembly"
+                                       :desc  "Comprehensive overview"}
+                                      {:url   "https://sourceware.org/binutils/docs-2.24/as/index.html"
                                        :label "GNU Assembler documentation (v2.24)"}
                                       {:url   "http://www.davespace.co.uk/arm/introduction-to-arm/"
                                        :label "ARM: Introduction to ARM: Start"}
@@ -159,8 +162,14 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                        :desc  "Lots of bitesize examples in both C & Asm"}
                                       {:url   "http://www.bravegnu.org/gnu-eprog/index.html"
                                        :label "Embedded Programming with the GNU Toolchain"}
+                                      {:url   "http://web.archive.org/web/20151104192733/http://www.ethernut.de/en/documents/arm-inline-asm.html"
+                                       :label "ARM GCC Inline Assembler Cookbook"}
                                       {:url   "https://community.arm.com/docs/DOC-9652"
-                                       :label "Useful assembler directives and macros for the GNU assembler"}]}
+                                       :label "Useful assembler directives and macros for the GNU assembler"}
+                                      {:url   "http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0068b/Chdjdaaj.html"
+                                       :label "ARM VFP instruction set"}
+                                      {:url   "https://mindplusplus.wordpress.com/2013/07/01/arm-vfp-vector-programming-part-3-source/"
+                                       :label "ARM VFP Vector Programming"}]}
                              {:label "Blogs"
                               :links [{:url   "http://www.carminenoviello.com/en/"
                                        :label "Carmine Noviello"}
