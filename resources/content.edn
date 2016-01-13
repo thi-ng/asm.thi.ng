@@ -40,13 +40,18 @@ If you want to contribute an interesting link, feel free to get in touch!"}
                                       {:url   "http://openocd.org"
                                        :label "OpenOCD"
                                        :desc  "Most flexible of the opensource chip debuggers"}]}
-                             {:label "STM_SDK"
+                             {:label "Vendor_SDK"
                               :links [{:url   "http://www.st.com/web/en/catalog/tools/PF259243"
                                        :label "STM32CubeF4 SDK"
                                        :desc  "Official STM SDK, incl. HAL, ARM CMSIS base & board specific drivers"}
                                       {:url   "http://www.st.com/web/en/catalog/tools/PF261909"
                                        :label "STM32CubeF7 SDK"
-                                       :desc  "Official STM SDK, incl. HAL, ARM CMSIS base & board specific drivers"}]}
+                                       :desc  "Official STM SDK, incl. HAL, ARM CMSIS base & board specific drivers"}
+                                      {:url   "http://www.keil.com/pack/doc/cmsis/General/html/index.html"
+                                       :label "ARM CMSIS"
+                                       :desc  "Vendor independnt hardware abstraction layer for Cortex-M devices"}
+                                      {:url   "http://www.keil.com/pack/doc/cmsis/DSP/html/modules.html"
+                                       :label "CMSIS DSP library"}]}
                              {:label "OSS_SDK"
                               :links [{:url   "http://www.chibios.org/"
                                        :label "ChibiOS"
@@ -149,6 +154,12 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "http://www.bottomupcs.com"
                                        :label "E-book: Computer Science from the Bottom Up"
                                        :desc  "Contains essential reading about ELF format"}]}
+                             {:label "Articles_C"
+                              :links [{:url   "https://matt.sh/howto-c"
+                                       :label "How to C in 2016"}
+                                      {:url   "http://www.davespace.co.uk/tags/EfficientC.html"
+                                       :label "Efficient C for ARM"
+                                       :desc  "Lots of bitesize examples in both C & Asm"}]}
                              {:label "Articles_Asm"
                               :links [{:url   "http://www.coranac.com/tonc/text/asm.htm"
                                        :label "A whirlwind tour of ARM assembly"
@@ -157,9 +168,6 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                        :label "GNU Assembler documentation (v2.24)"}
                                       {:url   "http://www.davespace.co.uk/arm/introduction-to-arm/"
                                        :label "ARM: Introduction to ARM: Start"}
-                                      {:url   "http://www.davespace.co.uk/tags/EfficientC.html"
-                                       :label "Efficient C for ARM"
-                                       :desc  "Lots of bitesize examples in both C & Asm"}
                                       {:url   "http://www.bravegnu.org/gnu-eprog/index.html"
                                        :label "Embedded Programming with the GNU Toolchain"}
                                       {:url   "http://web.archive.org/web/20151104192733/http://www.ethernut.de/en/documents/arm-inline-asm.html"
@@ -169,14 +177,23 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0068b/Chdjdaaj.html"
                                        :label "ARM VFP instruction set"}
                                       {:url   "https://mindplusplus.wordpress.com/2013/07/01/arm-vfp-vector-programming-part-3-source/"
-                                       :label "ARM VFP Vector Programming"}]}
+                                       :label "ARM VFP Vector Programming"}
+                                      {:url   "https://gcc.gnu.org/ml/gcc-help/2003-12/msg00227.html"
+                                       :label "Defining structs in GNU AS"}]}
                              {:label "Blogs"
                               :links [{:url   "http://www.carminenoviello.com/en/"
                                        :label "Carmine Noviello"}
                                       {:url   "http://stm32f4-discovery.com"
                                        :label "stm32f4-discovery.com"}
                                       {:url   "http://hackaday.com/tag/arm"
-                                       :label "Hackaday (ARM category)"}]}]}
+                                       :label "Hackaday (ARM category)"}]}
+                             {:label "Useful_techniques"
+                              :links [{:url   "http://www.dsprelated.com/showarticle/139.php"
+                                       :label "A Fixed-Point Introduction by Example"}
+                                      {:url   "http://www.coranac.com/2009/07/sines/"
+                                       :label "Fast fixed-point Sine approximation"}
+                                      {:url   "https://codingforspeed.com/"
+                                       :label "codingforspeed.com"}]}]}
 
             :projects
             {:section-label ".links.projects"
