@@ -146,6 +146,9 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                               :links [{:url   "https://leanpub.com/mastering-stm32"
                                        :label "Book: Mastering STM32"
                                        :desc  "Still WIP, but shaping up to be a great intro book to the STM32 platform"}
+                                      {:url   "http://www.cs.indiana.edu/~geobrown/book.pdf"
+                                       :label "Discovering the STM32 Microcontroller"
+                                       :desc  "Course textbook by Geoffrey Brown, lots of example code"}
                                       {:url   "http://www.hitex.com/fileadmin/pdf/insiders-guides/stm32/isg-stm32-v18d-scr.pdf"
                                        :label "E-book: The Insider's Guide to the STM32"
                                        :desc  "Indepth coverage and guide to working with core peripherals"}
@@ -153,7 +156,10 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                        :label "E-book: Modern C"}
                                       {:url   "http://www.bottomupcs.com"
                                        :label "E-book: Computer Science from the Bottom Up"
-                                       :desc  "Contains essential reading about ELF format"}]}
+                                       :desc  "Contains essential reading about ELF format"}
+                                      {:url   "http://13thmonkey.org/documentation/ARM/ARM-aslp/"
+                                       :label "ARM Assembly Language Programming"
+                                       :desc  "Slightly outdated (from 2001), but essentials still valid"}]}
                              {:label "Articles_C"
                               :links [{:url   "https://matt.sh/howto-c"
                                        :label "How to C in 2016"}
@@ -164,6 +170,8 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                               :links [{:url   "http://www.coranac.com/tonc/text/asm.htm"
                                        :label "A whirlwind tour of ARM assembly"
                                        :desc  "Comprehensive overview"}
+                                      {:url   "http://www.opensecuritytraining.info/IntroARM.html"
+                                       :label "Introduction to ARM assembly (course notes)"}
                                       {:url   "https://sourceware.org/binutils/docs-2.24/as/index.html"
                                        :label "GNU Assembler documentation (v2.24)"}
                                       {:url   "http://www.davespace.co.uk/arm/introduction-to-arm/"
@@ -179,27 +187,43 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "https://mindplusplus.wordpress.com/2013/07/01/arm-vfp-vector-programming-part-3-source/"
                                        :label "ARM VFP Vector Programming"}
                                       {:url   "https://gcc.gnu.org/ml/gcc-help/2003-12/msg00227.html"
-                                       :label "Defining structs in GNU AS"}]}
+                                       :label "Defining structs in GNU AS"}
+                                      {:url   "http://13thmonkey.org/documentation/ARM/HAI.pdf"
+                                       :label "ARM Interrupt handling"}]}
                              {:label "Blogs"
-                              :links [{:url   "http://www.carminenoviello.com/en/"
+                              :links [{:url   "http://armassemblylanguage.blogspot.co.uk/"
+                                       :label "ARM assembly language"
+                                       :desc  "Assembly language programming on ARM microprocessors with code examples"}
+                                      {:url   "http://www.carminenoviello.com/en/"
                                        :label "Carmine Noviello"}
                                       {:url   "http://stm32f4-discovery.com"
                                        :label "stm32f4-discovery.com"}
                                       {:url   "http://hackaday.com/tag/arm"
-                                       :label "Hackaday (ARM category)"}]}
+                                       :label "Hackaday (ARM category)"}
+                                      {:url   "https://codingforspeed.com/"
+                                       :label "codingforspeed.com"}]}
                              {:label "Useful_techniques"
                               :links [{:url   "http://www.dsprelated.com/showarticle/139.php"
                                        :label "A Fixed-Point Introduction by Example"}
                                       {:url   "http://www.coranac.com/2009/07/sines/"
                                        :label "Fast fixed-point Sine approximation"}
-                                      {:url   "https://codingforspeed.com/"
-                                       :label "codingforspeed.com"}]}]}
+                                      {:url   "http://www.ganssle.com/approx/approx.pdf"
+                                       :label "A Guide to Approximations"}
+                                      {:url   "http://13thmonkey.org/documentation/ARM/Apps33vA.pdf"
+                                       :label "Fixed Point Arithmetic on the ARM"}]}
+                             {:label "File_formats"
+                              :links [{:url   "https://en.wikipedia.org/wiki/Intel_HEX"
+                                       :label "Intel HEX format"
+                                       :desc  "Binary data ASCII encoding, often used as target format for flashing MCUs"}]}]}
 
             :projects
             {:section-label ".links.projects"
              :categories    [{:label "Workshops"
-                              :links [{:url   "https://github.com/thi-ng/ws-ldn-3"
-                                       :label "DIY Synth London workshop repo (Dec 2015)"
+                              :links [{:url   "https://github.com/thi-ng/ws-ldn-4"
+                                       :label "DIY Synth London workshop repo (STM32F7 - Jan 2016)"
+                                       :desc  "Complete Eclipse project w/ 4 examples (incl. polyphonic synth & touchscreen GUI)"}
+                                      {:url   "https://github.com/thi-ng/ws-ldn-3"
+                                       :label "DIY Synth London workshop repo (STM32F4 - Dec 2015)"
                                        :desc  "Complete Eclipse project w/ 8 examples (incl. polyphonic MIDI synth)"}]}
                              {:label "Audio"
                               :links [{:url   "https://github.com/pichenettes/eurorack"
