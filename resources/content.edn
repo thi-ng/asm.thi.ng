@@ -189,7 +189,9 @@ most popular ARM Cortex-M CPUs. We also use them for our workshops..."
                                       {:url   "https://gcc.gnu.org/ml/gcc-help/2003-12/msg00227.html"
                                        :label "Defining structs in GNU AS"}
                                       {:url   "http://13thmonkey.org/documentation/ARM/HAI.pdf"
-                                       :label "ARM Interrupt handling"}]}
+                                       :label "ARM Interrupt handling"}
+                                      {:url   "https://community.arm.com/docs/DOC-8769"
+                                       :label "Writing your own Asm startup code for Cortex-M"}]}
                              {:label "Blogs"
                               :links [{:url   "http://armassemblylanguage.blogspot.co.uk/"
                                        :label "ARM assembly language"
